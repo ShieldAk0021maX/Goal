@@ -1,0 +1,251 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+body{
+  padding:20px;
+  width:100%;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column ;
+}
+.container{
+  display:flex;
+  flex-direction: column;
+  width:85%;
+  height:auto;
+  overflow-y: scroll;
+  padding:8px 10px 20px 10px;
+  border:2px solid lightgray;
+  border-radius:8px;
+}
+.container header{
+  margin:10px 0;
+  font-size:20px;
+  font-weight:450;
+  text-align: center;
+  width:100%;
+  color:#5E5E5E;
+  padding:10px;
+  border-bottom:4px solid #9F9FA1;
+}
+.data-container{
+  display:flex;
+  width:100%;
+  max-height: 500px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-padding: 10px;
+  scrollbar-color: red;
+  flex-direction:column;
+}
+
+.btn{
+  display:flex;
+  padding:20px 10px 5px 10px;
+  width:100%;
+  justify-content: right;
+  align-items: center;
+  gap:20px;
+}
+.btn button{
+  width:80px;
+  border:none;
+  background:none;
+  color:#fff;
+  font-weight:600;
+  height:35px;
+  border-radius:5px;
+}
+.progress{
+  height:10px;
+  width:100%;
+  background:lightgray;
+  border-radius:10px;
+}
+.inner{
+  transition: 0.3s ease;
+  width:0;
+  height:10px;
+  background:#3359E2;
+  border-radius: 10px;
+}
+.progress-value{
+  height:29px;
+  width:40px;
+  background:#F3A33D;
+  color:#fff;
+  font-weight:700;
+  font-size:11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:50%;
+}
+.btn button:nth-child(3){
+  background:#A51D1F;
+}
+.btn button:last-child {
+  background: #18841E;
+}
+.btn button:last-child:active{
+  background:#13D51E;
+}
+.btn button:nth-child(3):active {
+  background: #FF1313;
+}
+.tabs{
+  display:grid;
+  width:100%;
+  grid-template-columns: 5% 10% 70% 15%;
+  padding:10px;
+  font-weight:550;
+}
+.tabs p{
+   text-align: center;
+}
+.data{
+  width:100%;
+  display:grid;
+  grid-template-columns: 5% 10% 70% 15%;
+  align-items: center;
+  padding:10px;
+}
+.data .tick,.time,.assignment,.status{
+  display:flex;
+  align-items: center;
+  height:50px;
+}
+.tick{
+  justify-content: center;
+  border:2px solid lightgray;
+  border-top-left-radius:8px;
+  border-bottom-left-radius:8px;
+  padding:0 5px;
+  border-left:6px solid #6C78FF;
+  text-align: center;
+}
+.assignment{
+  height:50px;
+  padding:0 10px;
+  border:2px solid lightgray;
+  border-left:none;
+border-right:none;
+}
+.time{
+  height:50px;
+ border:2px solid lightgray;
+ border-left:none;
+ text-align: center;
+ display:flex;
+ justify-content: center;
+ font-weight:500;
+}
+.status{
+  border-top-right-radius:8px;
+  border-bottom-right-radius:8px;
+  border:2px solid lightgray;
+ 
+  justify-content: center;
+  font-weight:500;
+  color:#EA0B0B;
+}
+.wrapper{
+  width:100%;
+  height:100vh;
+  backdrop-filter: blur(10px);
+  position: fixed !important;
+  top:0;
+  left:0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  display:none;
+}
+.actual-container{
+  width:80%;
+  padding:10px;
+  background:#fff;
+  display:flex;
+  flex-direction: column;
+  border:1px solid lightgray;
+  border-radius:8px;
+  
+}
+.actual-container header{
+  width:100%;
+  padding:10px 5px 10px 5px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:3px solid black;
+}
+.actual-container header > p{
+  font-size:23px;
+  font-weight:550;
+}
+.actual-container header button{
+  height:35px;
+  width:100px;
+  background:none;
+  border-radius:5px;
+  color:#fff;
+  border:none;
+  font-weight:550;
+  background:#A11C1C;
+  
+}
+.actual-container > p{
+  font-size:15px;
+  margin-top:15px;
+  font-weight:450;
+}
+.actual-container input{
+  height:35px;
+  width:100%;
+  outline:none;
+  border-radius:5px;
+  border:1px solid lightgray;
+  background:none;
+}
+.actual-container textarea{
+  resize:none;
+  height:100px;
+  padding:10px 12px;
+  font-family:normal;
+  font-size:17px;
+  outline:none;
+  margin-bottom:20px;
+  resize:none;
+  font-weight:550;
+  border-radius:10px;
+  border:1px solid lightgray;
+}
+.actual-container button{
+  height:35px;
+  background:#147C2F;
+  color:#fff;
+  font-weight:600;
+  border:none;
+  border-radius:7px;
+}
+.wrapper.active{
+  display:flex;
+}
+.actual-container textarea.wrong{
+  background:#FF04041F;
+  border:2px solid red;
+}
+.actual-container input.invalid{
+  background:#FF04041F;
+  border:2px solid red;
+}
+.actual-container header button:active{
+  background:#F51313;
+}
+.actual-container button:active{
+ background:#04E52E;
+}
